@@ -1,0 +1,211 @@
+:root {
+  /* --- Soft Old Newspaper Colour Palette --- */
+  --bg: #f5f2eb;
+  --text: #3c3836;
+  --text-h: #1d2021;
+  --border: #d5cfc1;
+  --code-bg: #eae5d9;
+  --accent: #8f383b;
+  --accent-bg: rgba(143, 56, 59, 0.08);
+  --accent-border: rgba(143, 56, 59, 0.3);
+  --social-bg: rgba(234, 229, 217, 0.5);
+
+  --shadow:
+    rgba(44, 43, 41, 0.05) 0 10px 15px -3px,
+    rgba(44, 43, 41, 0.03) 0 4px 6px -2px;
+
+  /* --- Font Families --- */
+  --sans: "Courier New", Courier, monospace;
+  --heading: "Courier New", Courier, monospace;
+  --mono: "Courier New", Courier, monospace;
+
+  /* --- Standard Type Scale --- */
+  --text-small: 0.875rem;   /* 14px: dates and metadata */
+  --text-body: 1rem;        /* 16px: body text and project files */
+  --text-nav: 1.125rem;     /* 18px: navigation and parent folders */
+  --text-section: 1.5rem;   /* 24px: section headings */
+  --text-project: 2rem;     /* 32px: project titles */
+  --text-page: 3.5rem;      /* 56px: main page title */
+
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+  letter-spacing: -0.15px;
+
+  color-scheme: light;
+  color: var(--text);
+  background-color: var(--bg);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1c1917;
+    --text: #d5cfc1;
+    --text-h: #f5f2eb;
+    --border: #3c3836;
+    --code-bg: #141211;
+    --accent: #b85659;
+    --accent-bg: rgba(184, 86, 89, 0.12);
+    --accent-border: rgba(184, 86, 89, 0.4);
+    --social-bg: rgba(38, 35, 34, 0.5);
+
+    --shadow:
+      rgba(0, 0, 0, 0.3) 0 10px 15px -3px,
+      rgba(0, 0, 0, 0.15) 0 4px 6px -2px;
+  }
+
+  #social .button-icon {
+    filter: invert(1) brightness(1.5) sepia(0.3);
+  }
+}
+
+/* --- General Page Layout --- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--bg);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  width: 1126px;
+  max-width: 100%;
+  min-height: 100svh;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* --- Global Typography --- */
+
+h1,
+h2,
+h3 {
+  color: var(--text-h);
+  font-family: var(--heading);
+  font-weight: 500;
+}
+
+h1 {
+  margin: 32px 0;
+  font-size: var(--text-page);
+  line-height: 1.1;
+  letter-spacing: -1.68px;
+}
+
+h2 {
+  margin: 0 0 8px;
+  font-size: var(--text-project);
+  line-height: 1.2;
+  letter-spacing: -0.32px;
+}
+
+h3 {
+  margin: 0 0 8px;
+  font-size: var(--text-section);
+  line-height: 1.25;
+  letter-spacing: -0.24px;
+}
+
+p {
+  margin: 0;
+  font-size: var(--text-body);
+}
+
+.subtitle {
+  font-size: var(--text-nav);
+}
+
+.project-date {
+  font-size: var(--text-small);
+  color: var(--text);
+}
+
+/* --- Code --- */
+
+code,
+.counter {
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--text-h);
+  font-family: var(--mono);
+}
+
+code {
+  padding: 4px 8px;
+  background-color: var(--code-bg);
+  font-size: var(--text-small);
+  line-height: 1.35;
+}
+
+/* --- Dividers --- */
+
+.divider {
+  width: 100%;
+  height: 4px;
+  margin: 16px 0 32px;
+  border: none;
+  background-color: var(--border);
+  opacity: 0.85;
+}
+
+.vertical-divider {
+  align-self: stretch;
+  width: 3px;
+  margin: 0 32px;
+  background-color: var(--border);
+  opacity: 0.85;
+}
+
+/* --- Project Card --- */
+
+.project-card {
+  padding: 24px;
+  background-color: var(--code-bg);
+  text-align: left;
+  border-radius: 15px;
+}
+
+/* --- Responsive Typography --- */
+
+@media (max-width: 1024px) {
+  :root {
+    --text-project: 1.75rem; /* 28px */
+    --text-page: 2.25rem;    /* 36px */
+  }
+
+  h1 {
+    margin: 20px 0;
+  }
+
+  .vertical-divider {
+    margin: 0 20px;
+  }
+  
+}
+
+@media (max-width: 700px) {
+  #root {
+    padding: 0 16px;
+  }
+}

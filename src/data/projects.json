@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Project One",
+    "date": "2026-09-03",
+    "type": "",
+    "role": "",
+    "status": "",
+    "image": "",
+    "summary": "A short introduction explaining what this project does.",
+    "description": "This is where the longer project write-up will appear. You can explain the purpose of the project, your contribution, and how it works.",
+    "highlights": [],
+    "technologies": ["React", "JavaScript", "CSS"],
+    "link": "https://example.com",
+    "github": ""
+  },
+  {
+    "id": 2,
+    "title": "Project Two",
+    "date": "2026-08-20",
+    "type": "",
+    "role": "",
+    "status": "",
+    "image": "",
+    "summary": "A short introduction for the second project.",
+    "description": "This is the full description for Project Two.",
+    "highlights": [],
+    "technologies": ["Java", "Spring Boot", "SQL"],
+    "link": "",
+    "github": ""
+  },
+  {
+    "id": 3,
+    "title": "Project Three",
+    "date": "2026-07-15",
+    "type": "",
+    "role": "",
+    "status": "",
+    "image": "",
+    "summary": "A short introduction for the third project.",
+    "description": "This is the full description for Project Three.",
+    "highlights": [],
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "link": "",
+    "github": ""
+  },
+    {
+    "id": 4,
+    "title": "Project Four",
+    "date": "2026-09-10",
+    "type": "",
+    "role": "",
+    "status": "",
+    "image": "",
+    "summary": "A short introduction for the fourth project.lorem ipsum dolor sit amet consectetur adipiscing elit id mollit facilis lorem molestias atque voluptas mollit harum quo facere et est culpa excepteur quo quo cupiditate optio tempore quis quo tempor eos quo dignissimos consequat cumque animi sunt excepturi facere nulla libero fugiat nisi esse soluta dolores dolores consectetur qui",
+    "description": "This is the full description for Project Four.lorem ipsum dolor sit amet consectetur adipiscing elit id mollit facilis lorem molestias atque voluptas mollit harum quo facere et est culpa excepteur quo quo cupiditate optio tempore quis quo tempor eos quo dignissimos consequat cumque animi sunt excepturi facere nulla libero fugiat nisi esse soluta dolores dolores consectetur qui",
+    "highlights": [],
+    "technologies": ["Python", "Django", "PostgreSQL"],
+    "link": "",
+    "github": ""
+  }
+]
