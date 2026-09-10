@@ -1,62 +1,56 @@
 [
   {
     "id": 1,
-    "title": "Project One",
+    "title": "LP Portfolio",
     "date": "2026-09-03",
-    "type": "",
-    "role": "",
-    "status": "",
+    "type": "Personal project",
+    "role": "Designer and developer",
+    "status": "In progress",
     "image": "",
-    "summary": "A short introduction explaining what this project does.",
-    "description": "This is where the longer project write-up will appear. You can explain the purpose of the project, your contribution, and how it works.",
+    "summary": "A React-based portfolio created to replace my original school WordPress portfolio.",
+    "description": "This personal portfolio presents my projects, technical skills, and development process through an interactive folder-style interface.",
     "highlights": [],
-    "technologies": ["React", "JavaScript", "CSS"],
-    "link": "https://example.com",
-    "github": ""
+    "technologies": ["React", "JavaScript", "CSS", "Vite"],
+    "link": "",
+    "github": "",
+    "updates": [
+      {
+        "date": "2026-09-10",
+        "title": "Improved portfolio navigation and inquiries",
+        "details": "Added About and Contact sections for personal and professional information, and changed the inquiry widget into a compact FAQ with one answer visible at a time."
+      },
+      {
+        "date": "2026-09-03",
+        "title": "Initial version",
+        "details": "Created the first React version of the portfolio as a replacement for the original WordPress portfolio."
+      }
+    ]
   },
   {
-    "id": 2,
-    "title": "Project Two",
-    "date": "2026-08-20",
-    "type": "",
-    "role": "",
-    "status": "",
+    "id": 5,
+    "title": "School WordPress Portfolio",
+    "date": "2017-08-01",
+    "type": "School project",
+    "role": "Student developer",
+    "status": "Archived",
     "image": "",
-    "summary": "A short introduction for the second project.",
-    "description": "This is the full description for Project Two.",
+    "summary": "The original portfolio I created during school using WordPress.",
+    "description": "This archived project represents an earlier stage of my development experience and served as the foundation for the current React portfolio.",
     "highlights": [],
-    "technologies": ["Java", "Spring Boot", "SQL"],
-    "link": "",
-    "github": ""
-  },
-  {
-    "id": 3,
-    "title": "Project Three",
-    "date": "2026-07-15",
-    "type": "",
-    "role": "",
-    "status": "",
-    "image": "",
-    "summary": "A short introduction for the third project.",
-    "description": "This is the full description for Project Three.",
-    "highlights": [],
-    "technologies": ["HTML", "CSS", "JavaScript"],
-    "link": "",
-    "github": ""
-  },
-    {
-    "id": 4,
-    "title": "Project Four",
-    "date": "2026-09-10",
-    "type": "",
-    "role": "",
-    "status": "",
-    "image": "",
-    "summary": "A short introduction for the fourth project.lorem ipsum dolor sit amet consectetur adipiscing elit id mollit facilis lorem molestias atque voluptas mollit harum quo facere et est culpa excepteur quo quo cupiditate optio tempore quis quo tempor eos quo dignissimos consequat cumque animi sunt excepturi facere nulla libero fugiat nisi esse soluta dolores dolores consectetur qui",
-    "description": "This is the full description for Project Four.lorem ipsum dolor sit amet consectetur adipiscing elit id mollit facilis lorem molestias atque voluptas mollit harum quo facere et est culpa excepteur quo quo cupiditate optio tempore quis quo tempor eos quo dignissimos consequat cumque animi sunt excepturi facere nulla libero fugiat nisi esse soluta dolores dolores consectetur qui",
-    "highlights": [],
-    "technologies": ["Python", "Django", "PostgreSQL"],
-    "link": "",
-    "github": ""
+    "technologies": ["WordPress"],
+    "link": "https://lynettepblog.wordpress.com",
+    "github": "",
+    "updates": [
+      {
+        "date": "2017-08-01",
+        "title": "Last update",
+        "details": "Completed the final update to the school portfolio."
+      },
+      {
+        "date": "2026-09-10",
+        "title": "Archived",
+        "details": "Replaced this portfolio with the current React-based version."
+      }
+    ]
   }
 ]

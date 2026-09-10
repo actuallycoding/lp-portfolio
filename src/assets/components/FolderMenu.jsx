@@ -3,12 +3,30 @@ import { useState } from 'react'
 function FolderMenu({
   projects,
   selectedProject,
-  onSelectProject
+  activeSection,
+  onSelectProject,
+  onSelectSection,
 }) {
   const [isProjectsOpen, setIsProjectsOpen] = useState(false)
 
   return (
     <nav className="folder-menu" aria-label="Project navigation">
+      <button
+        type="button"
+        className={`menu-item ${activeSection === 'about' ? 'active' : ''}`}
+        onClick={() => onSelectSection('about')}
+      >
+        ABOUT ME
+      </button>
+
+      <button
+        type="button"
+        className={`menu-item ${activeSection === 'contact' ? 'active' : ''}`}
+        onClick={() => onSelectSection('contact')}
+      >
+        CONTACT
+      </button>
+
       <button
         type="button"
         className="folder-button"
@@ -27,6 +45,10 @@ function FolderMenu({
                 type="button"
                 className={`project-item ${
                   selectedProject?.id === project.id ? 'active' : ''
+                } ${
+                  project.status?.toLowerCase() === 'archived'
+                    ? 'archived'
+                    : ''
                 }`}
                 onClick={() => onSelectProject(project)}
               >
@@ -34,12 +56,16 @@ function FolderMenu({
                   {project.title}
                 </span>
 
-                <time
-                  className="project-item-date"
-                  dateTime={project.date}
-                >
-                  {project.date.replaceAll('-', '.')}
-                </time>
+                <span className="project-item-meta">
+                  <time className="project-item-date" dateTime={project.date}>
+                    {project.date.replaceAll('-', '.')}
+                  </time>
+                  {project.status && (
+                    <span className="project-item-status">
+                      {project.status}
+                    </span>
+                  )}
+                </span>
               </button>
             </li>
           ))}

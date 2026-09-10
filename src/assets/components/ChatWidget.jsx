@@ -1,67 +1,39 @@
-import { useEffect, useRef, useState } from 'react'
+import { useState } from 'react'
 
 const inquiries = [
   {
     id: 1,
-    question: 'Are you available for work?',
+    question: 'Open to work?',
     answer:
-      'Yes, I am open to discussing suitable opportunities. You can contact me using the details provided below.',
+      'Yes. I am open to suitable software development opportunities.',
   },
   {
     id: 2,
-    question: 'What technologies do you use?',
+    question: 'Tech stack?',
     answer:
-      'I primarily work with Java, Spring Boot, JavaScript, React, SQL, and REST APIs.',
+      'Java, Spring Boot, JavaScript, React, SQL, and REST APIs.',
   },
   {
     id: 3,
-    question: 'Where can I view your projects?',
+    question: 'Personal projects?',
     answer:
-      'Open the Projects folder on the left and select a project title to view its details.',
+      'These are personal projects built to demonstrate my skills and technical interests.',
   },
   {
     id: 4,
-    question: 'How can I contact you?',
-    answer: 'You can contact me by email at your-email@example.com.',
-  },
-]
-
-const initialMessages = [
-  {
-    id: 'welcome',
-    sender: 'info',
-    text: 'Select a question to view more information.',
+    question: 'Contact details?',
+    answer:
+      'You can contact me through the Contact section using my email, LinkedIn, or phone number.',
   },
 ]
 
 function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false)
-  const [messages, setMessages] = useState(initialMessages)
-  const chatEndRef = useRef(null)
+  const [selectedInquiry, setSelectedInquiry] = useState(null)
 
   function selectInquiry(inquiry) {
-    const messageId = Date.now()
-
-    setMessages((currentMessages) => [
-      ...currentMessages,
-      {
-        id: `question-${inquiry.id}-${messageId}`,
-        sender: 'user',
-        text: inquiry.question,
-      },
-      {
-        id: `answer-${inquiry.id}-${messageId}`,
-        sender: 'info',
-        text: inquiry.answer,
-      },
-    ])
+    setSelectedInquiry(inquiry)
   }
-
-  useEffect(() => {
-    if (isOpen) {
-      chatEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-    }
-  }, [messages, isOpen])
 
   return (
     <aside className="chat-widget">
@@ -85,18 +57,20 @@ function ChatWidget() {
 
           <div className="chat-body" aria-live="polite">
             <div className="message-history">
-              {messages.map((message) => (
-                <div
-                  className={`chat-message ${
-                    message.sender === 'user'
-                      ? 'user-message'
-                      : 'info-message'
-                  }`}
-                  key={message.id}
-                >
-                  {message.text}
+              {selectedInquiry ? (
+                <>
+                  <div className="chat-message user-message">
+                    {selectedInquiry.question}
+                  </div>
+                  <div className="chat-message info-message">
+                    {selectedInquiry.answer}
+                  </div>
+                </>
+              ) : (
+                <div className="chat-message info-message">
+                  Select a question to view more information.
                 </div>
-              ))}
+              )}
 
               <div className="quick-replies" aria-label="Suggested questions">
                 {inquiries.map((inquiry) => (
@@ -110,8 +84,6 @@ function ChatWidget() {
                   </button>
                 ))}
               </div>
-
-              <div ref={chatEndRef} />
             </div>
           </div>
         </section>

@@ -86,6 +86,23 @@ function ProjectCard({ project }) {
         </section>
       )}
 
+      {project.updates?.length > 0 && (
+        <section className="project-section project-updates">
+          <h3>Update History</h3>
+          <ol>
+            {project.updates.map((update) => (
+              <li key={`${update.date}-${update.title}`}>
+                <time dateTime={update.date}>
+                  {update.date.replaceAll('-', '.')}
+                </time>
+                <strong>{update.title}</strong>
+                <p>{update.details}</p>
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
+
       {hasLinks && (
         <footer className="project-links">
           {project.link && (

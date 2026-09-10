@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import FolderMenu from './assets/components/FolderMenu'
 import ProjectCard from './assets/components/ProjectCard'
+import ProfileSection from './assets/components/ProfileSection'
 import projects from './data/projects.json'
 import ChatWidget from './assets/components/ChatWidget'
 import './App.css'
@@ -13,12 +14,20 @@ function App() {
   const [selectedProject, setSelectedProject] = useState(
     sortedProjects[0] ?? null
   )
+  const [activeSection, setActiveSection] = useState('about')
+
+  function selectProject(project) {
+    setSelectedProject(project)
+    setActiveSection('project')
+  }
 
   return (
     <>
       <header className="portfolio-header">
         <h1>LP PORTFOLIO</h1>
-        <p className="subtitle">ROOT / LP_PORTFOLIO / LOGS</p>
+        <p className="subtitle">
+          PERSONAL PROJECTS / TECHNICAL NOTES / DEVELOPMENT LOGS
+        </p>
         <hr className="divider" />
       </header>
 
@@ -26,13 +35,19 @@ function App() {
         <FolderMenu
           projects={sortedProjects}
           selectedProject={selectedProject}
-          onSelectProject={setSelectedProject}
+          activeSection={activeSection}
+          onSelectProject={selectProject}
+          onSelectSection={setActiveSection}
         />
 
         <div className="vertical-divider" />
 
         <section className="project-area">
-          <ProjectCard project={selectedProject} />
+          {activeSection === 'project' ? (
+            <ProjectCard project={selectedProject} />
+          ) : (
+            <ProfileSection section={activeSection} />
+          )}
         </section>
       </main>
       <ChatWidget />
