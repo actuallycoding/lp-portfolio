@@ -70,10 +70,20 @@ This repository provides a minimal, fast development setup for building a React-
 - The React Compiler is not enabled by default due to dev/build performance tradeoffs. See React docs if you want to enable it.
 - If you prefer TypeScript and type-aware linting, consider switching to a TypeScript template.
 
-## Contributing
+## Feedback & suggestions
 
-Contributions are welcome. Open an issue or submit a pull request with a clear description of changes.
+Feedback and suggestions are welcome — open an issue or drop a short note describing improvements or bugs. Contributions (pull requests) are optional: feel free to fork the repo and propose changes if you want.
+
+## Assets & fonts
+
+All assets included in this template (images, icons, and the font configured in the project) are free to use. The font was chosen from freely available options so this starter is ready for personal and learning projects. If you replace or add assets for professional or commercial use, verify the individual asset licenses and any required attribution before publishing.
 
 ## License
 
-Specify a license in LICENSE or update this section with the chosen license.
+This project currently does not include a LICENSE file. The assets bundled here are free to use, but the repository as a whole does not grant any license — all rights are reserved by default. If you want to allow others to reuse the code or assets under permissive terms, add a LICENSE file. Common choices:
+
+- MIT (permissive)
+- Apache-2.0 (permissive with patent grant)
+- Unlicense (public domain)
+
+If you’d like, tell me which license to add and I can create the LICENSE file for you.
