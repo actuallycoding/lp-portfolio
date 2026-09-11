@@ -1,16 +1,79 @@
-# React + Vite
+# lp-portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight React + Vite portfolio/landing page template.
 
-Currently, two official plugins are available:
+This repository provides a minimal, fast development setup for building a React-based portfolio or landing page using Vite. It includes opinionated defaults for HMR, ESLint, and modern React tooling so you can focus on content and layout.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## What this is
 
-## React Compiler
+- A starter project to build a personal portfolio or landing page with React and Vite.
+- Minimal configuration so the project boots quickly in development and produces small optimized builds for production.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technologies used
 
-## Expanding the ESLint configuration
+- React (functional components, hooks)
+- Vite (dev server and build)
+- ESLint (basic linting rules)
+- Optional: @vitejs/plugin-react or @vitejs/plugin-react-swc (see package.json)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Minimum requirements
+
+- Node.js >= 16 (Node 18+ recommended)
+- npm >= 8 or yarn or pnpm
+- Git (to clone the repo)
+
+## Setup & development
+
+1. Clone the repository
+
+   git clone https://github.com/actuallycoding/lp-portfolio.git
+   cd lp-portfolio
+
+2. Install dependencies
+
+   npm install
+   # or
+   # yarn
+   # pnpm install
+
+3. Start the dev server (hot reload enabled)
+
+   npm run dev
+
+   Open http://localhost:5173 (or the URL printed by Vite) and start developing.
+
+## Build for production
+
+1. Create an optimized production build:
+
+   npm run build
+
+2. Preview the production build locally:
+
+   npm run preview
+
+## Environment / Configuration
+
+- Check package.json for available scripts and installed plugins.
+- If the project uses environment variables, create a .env file (example: .env.example) and list required values there.
+
+## Linting & Formatting
+
+- ESLint is included; run:
+
+  npm run lint
+
+- Add or update lint rules in the project ESLint configuration file.
+
+## Notes
+
+- The React Compiler is not enabled by default due to dev/build performance tradeoffs. See React docs if you want to enable it.
+- If you prefer TypeScript and type-aware linting, consider switching to a TypeScript template.
+
+## Contributing
+
+Contributions are welcome. Open an issue or submit a pull request with a clear description of changes.
+
+## License
+
+Specify a license in LICENSE or update this section with the chosen license.
