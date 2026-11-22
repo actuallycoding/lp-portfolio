@@ -1,5 +1,32 @@
 [
   {
+    "id": 6,
+    "title": "Bork",
+    "date": "2025-02-17",
+    "type": "Mobile app",
+    "role": "Developer",
+    "status": "In progress",
+    "image": "/assets/bork-icon.png",
+    "summary": "A Flutter app concept to help dog owners find nearby playmates and make it easier for dogs to socialise.",
+    "description": [
+      "The goal: make it easier for dogs to find nearby playmates, especially where welcoming dog-owner communities can be hard to find in Singapore.",
+      "My first direction was friendly pastels. After attending pet fairs, I realised that look felt out of context.",
+      "On 2026-11-22, I began exploring a summer-beach theme: tropical to Singapore, easier on the eyes, and a better match for the icon featuring my friend's dog.",
+      "Built so far: Flutter/Dart onboarding and welcome screens, a custom theme, and an app icon. Authentication, profiles, nearby discovery and matching, messaging, and backend services are planned—not implemented."
+    ],
+    "highlights": [],
+    "technologies": ["Flutter", "Dart"],
+    "link": "",
+    "github": "https://github.com/actuallycoding/bork_app",
+    "updates": [
+      {
+        "date": "2026-11-22",
+        "title": "Rethinking the visual direction",
+        "details": "After attending pet fairs, I realised my initial friendly pastel direction felt out of context for the experience I wanted. I started shifting toward a summer-beach look: tropical to Singapore, easier on the eyes, and a better fit for the app icon featuring my friend's dog. The theme and app remain in progress. Authentication, profiles, nearby discovery and matching, messaging, and backend services are still planned."
+      }
+    ]
+  },
+  {
     "id": 1,
     "title": "LP Portfolio",
     "date": "2026-09-03",
