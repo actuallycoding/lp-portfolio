@@ -384,13 +384,20 @@
 
 .project-card-header-with-image {
   display: grid;
-  grid-template-columns: 112px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) 112px;
   gap: 24px;
   align-items: center;
 }
 
+.project-card-header-with-image > div {
+  grid-column: 1;
+  grid-row: 1;
+}
+
 .project-card-image {
   display: block;
+  grid-column: 2;
+  grid-row: 1;
   width: 112px;
   height: 112px;
   border: 2px solid var(--accent);
@@ -640,7 +647,7 @@
   }
 
   .project-card-header-with-image {
-    grid-template-columns: 80px minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) 80px;
     gap: 16px;
   }
 
