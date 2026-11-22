@@ -59,7 +59,15 @@ function ProjectCard({ project }) {
 
       <section className="project-section">
         <h3>Project Notes</h3>
-        <p className="project-description">{project.description}</p>
+        {Array.isArray(project.description) ? (
+          <ul className="project-highlights">
+            {project.description.map((note) => (
+              <li key={note}>{note}</li>
+            ))}
+          </ul>
+        ) : (
+          <p className="project-description">{project.description}</p>
+        )}
       </section>
 
       {project.highlights?.length > 0 && (
