@@ -12,20 +12,27 @@ function ProjectCard({ project }) {
 
   return (
     <article className="project-card">
-      <header className="project-card-header">
-        <p className="project-label">PROJECT LOG</p>
-        <h2>{project.title}</h2>
+      <header
+        className={`project-card-header ${
+          project.image ? 'project-card-header-with-image' : ''
+        }`}
+      >
+        {project.image && (
+          <img
+            className="project-card-image"
+            src={project.image}
+            alt={`${project.title} icon`}
+          />
+        )}
 
-        <time className="project-date" dateTime={project.date}>
-          {project.date.replaceAll('-', '.')}
-        </time>
+        <div>
+          <p className="project-label">PROJECT LOG</p>
+          <h2>{project.title}</h2>
+          <time className="project-date" dateTime={project.date}>
+            {project.date.replaceAll('-', '.')}
+          </time>
+        </div>
       </header>
-
-      {project.image && (
-        <figure className="project-preview">
-          <img src={project.image} alt={`${project.title} preview`} />
-        </figure>
-      )}
 
       {hasMetadata && (
         <dl className="project-metadata">
