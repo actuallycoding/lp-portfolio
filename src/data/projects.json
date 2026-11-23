@@ -20,6 +20,16 @@
     "github": "https://github.com/actuallycoding/bork_app",
     "updates": [
       {
+        "date": "2026-11-23",
+        "title": "Updated the Bork project icon",
+        "details": "Replaced the portfolio's Bork icon with the latest square design, keeping its existing asset path."
+      },
+      {
+        "date": "2026-11-23",
+        "title": "Learning from a puppy animation edge case",
+        "details": "This 8-frame, 443 × 443 GIF's transparency and disposal-to-background metadata made it flash black and play frames out of order on Android through this decoder path. I left the original GIF unchanged, extracted its frames as transparent PNGs, and played them in sequence with a Flutter AnimationController at 110 ms per frame. The animation scales responsively with crisp pixel rendering; I learned to handle this asset's metadata and timing explicitly."
+      },
+      {
         "date": "2026-11-22",
         "title": "Rethinking the visual direction",
         "details": "After attending pet fairs, I realised my initial friendly pastel direction felt out of context for the experience I wanted. I started shifting toward a summer-beach look: tropical to Singapore, easier on the eyes, and a better fit for the app icon featuring my friend's dog. The theme and app remain in progress. Authentication, profiles, nearby discovery and matching, messaging, and backend services are still planned."
