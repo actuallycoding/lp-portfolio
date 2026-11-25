@@ -5,6 +5,7 @@
   --text-h: #1d2021;
   --border: #d5cfc1;
   --code-bg: #eae5d9;
+  --gutter-weave: rgba(143, 56, 59, 0.045);
   --accent: #8f383b;
   --accent-bg: rgba(143, 56, 59, 0.08);
   --accent-border: rgba(143, 56, 59, 0.3);
@@ -51,6 +52,7 @@
     --text-h: #f5f2eb;
     --border: #3c3836;
     --code-bg: #141211;
+    --gutter-weave: rgba(184, 86, 89, 0.06);
     --accent: #b85659;
     --accent-bg: rgba(184, 86, 89, 0.12);
     --accent-border: rgba(184, 86, 89, 0.4);
@@ -73,6 +75,8 @@
 }
 
 body {
+  position: relative;
+  isolation: isolate;
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
@@ -87,13 +91,48 @@ select {
 }
 
 #root {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   width: 1126px;
   max-width: 100%;
   min-height: 100svh;
   margin: 0 auto;
+  background-color: var(--bg);
   text-align: center;
+}
+
+@media (min-width: 1127px) {
+  body::before,
+  body::after {
+    content: '';
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    bottom: 0;
+    width: calc((100vw - 1126px) / 2);
+    background-image:
+      repeating-linear-gradient(
+        0deg,
+        var(--gutter-weave) 0 24px,
+        transparent 24px 48px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        var(--gutter-weave) 0 24px,
+        transparent 24px 48px
+      );
+    pointer-events: none;
+  }
+
+  body::before {
+    left: 0;
+  }
+
+  body::after {
+    right: 0;
+  }
 }
 
 /* --- Global Typography --- */
@@ -207,5 +246,10 @@ code {
 @media (max-width: 700px) {
   #root {
     padding: 0 16px;
+  }
+
+  body::before,
+  body::after {
+    display: none;
   }
 }
